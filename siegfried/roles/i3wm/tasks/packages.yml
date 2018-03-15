@@ -1,0 +1,24 @@
+---
+- name: Install X-Window
+  yum: name="@X Window System" state=present
+
+- name: Install Desktop
+  yum: name="@Desktop" state=present
+
+- name: Install Desktop Platform
+  yum: name="@Desktop Platform" state=present
+
+- name: Install lightdm
+  yum: name=lightdm state=present
+
+- name: Install xorg-xinit
+  yum: name=xorg-x11-xinit-session state=present
+
+- name: Install i3
+  yum: name=i3 state=present
+
+- name: Install i3status
+  yum: name=i3status state=present
+
+- name: Install i3lock
+  yum: name=i3lock state=present

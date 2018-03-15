@@ -1,0 +1,7 @@
+---
+ - name: Install i3wm 
+   include: tasks/packages.yml
+   become: true
+   become_user: root
+   tags:
+     - packages

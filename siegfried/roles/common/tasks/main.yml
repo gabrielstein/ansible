@@ -1,0 +1,26 @@
+---
+ - import_tasks: tasks/epel.yml
+   become: yes
+   become_user: root
+   tags:
+     - epel
+ 
+ - import_tasks: tasks/elrepo.yml
+   become: yes
+   become_user: root
+   tags:
+     - elrepo
+ 
+ - import_tasks: tasks/blacklist.yml
+   become: yes
+   become_user: root
+   tags:
+     - blacklist
+   
+ - import_tasks: tasks/packages.yml
+   
+ - import_tasks: tasks/packages.yml
+   become: yes
+   become_user: root
+   tags:
+     - packages

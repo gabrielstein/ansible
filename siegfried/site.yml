@@ -1,0 +1,11 @@
+---
+- name: Installs i3wm, docker and some utilities
+  hosts: localhost
+  roles:
+    - common
+#    - vim
+#    - vim-plugins
+    - i3wm
+#    - docker
+#    - minishift
+#
