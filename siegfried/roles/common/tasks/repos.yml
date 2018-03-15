@@ -1,10 +1,16 @@
 ---
-- name: (RedHat) install ELRepo key
+- name: Copy the EPEL repository definition
+  copy: src=epel.repo dest=/etc/yum.repos.d/epel.repo
+
+- name: Create the GPG key for EPEL
+  copy: src=RPM-GPG-KEY-EPEL-7 dest=/etc/pki/rpm-gpg
+
+- name: Install Elrepo Key
   become: yes
   become_user: root
   rpm_key: state=present key='https://www.elrepo.org/RPM-GPG-KEY-elrepo.org'
 
-- name: (RedHat) get rpm...
+- name: Download RPM ElRepo
   become: yes
   become_user: root
   get_url: >-
@@ -15,7 +21,7 @@
     mode=0644
     timeout=30
   
-- name: (RedHat) install ELRepo
+- name: Install ELRepo
   become: yes
   become_user: root
   package: state=present name=/tmp/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
