@@ -4,6 +4,11 @@
 * That is for now WiP but I will "devop it"...
 * Goal: Setup all my machines using ansible
 
+#### Environment:Machine
+
+* CentOS 7.4.x(latest): siegfried
+
+
 #### ToDo
 
 * Configuration
