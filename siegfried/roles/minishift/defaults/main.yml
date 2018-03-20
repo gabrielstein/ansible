@@ -1,0 +1,20 @@
+---
+minishift_repo: minishift/minishift 
+minishift_github_url: https://api.github.com/repos
+minishift_release_tag_name: ""
+minishift_force_install: yes
+minishift_restart: yes
+minishift_delete: yes 
+minishift_start_options: []
+minishift_dest: /usr/local/bin  
+openshift_client_dest: /usr/local/bin
+openshift_force_client_copy: yes 
+openshift_hostname: local.openshift
+minishift_install_path: /usr/local/bin
+oc_install_path: /usr/local/bin
+minishift_version: '1.6.0'
+oc_version_hash: 'v3.7.2-282e43f'
+oc_version: '3.7.2'
+minishift_repo_url: "https://github.com/minishift/minishift/releases/download/v{{ minishift_version }}/minishift-{{ minishift_version }}-linux-amd64.tgz"
+oc_repo_url: "https://github.com/openshift/origin/releases/download/v{{ oc_version }}/openshift-origin-client-tools-{{ oc_version_hash }}-linux-64bit.tar.gz"
+minishift_checksum: sha256:b646a9d30eca19b21ca42ff190cd4f4d14d5944ec4ad49145ff989a78bba9ec5

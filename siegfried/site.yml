@@ -1,12 +1,14 @@
 ---
 - name: Installs i3wm, docker and some utilities
   hosts: localhost
+  connection: local
   roles:
+    - minishift
     - common
 #    - vim
 #    - vim-plugins
-    - i3wm
     - apps
-#    - docker
-#    - minishift
-#
+    - kvm
+    - kubectl
+    - minikube
+    - i3wm

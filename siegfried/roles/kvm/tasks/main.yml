@@ -1,0 +1,14 @@
+---
+ # Install needed packages for KVM 
+ - import_tasks: tasks/packages.yml
+   become: yes
+   become_user: root
+   tags:
+     - packages
+
+ # Enable Systemd Service and Starts Daemon
+ - import_tasks: tasks/systemd.yml
+   become: yes
+   become_user: root
+   tags:
+     - systemd

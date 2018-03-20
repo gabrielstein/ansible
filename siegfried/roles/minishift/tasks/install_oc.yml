@@ -1,0 +1,11 @@
+- name: Install minishift
+  unarchive:
+    src: "{{ oc_repo_url }}"
+    dest: "{{ oc_install_path }}"
+    extra_opts: [--strip-components=1]
+    exclude:
+      - README
+    owner: root
+    group: root
+    remote_src: yes
+    mode: 0755

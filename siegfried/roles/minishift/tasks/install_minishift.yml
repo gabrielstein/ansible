@@ -1,0 +1,11 @@
+- name: Install minishift
+  unarchive:
+    src: "{{ minishift_repo_url }}"
+    dest: "{{ minishift_install_path }}"
+    exclude:
+      - README.adoc
+      - LICENSE
+    owner: root
+    group: root
+    remote_src: yes
+    mode: 0755
